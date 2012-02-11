@@ -104,13 +104,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void DictionaryWithTwoWordsThatAreAnagramsEachOther()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Dictionary with two words that are anagrams each other", ((string[])(null)));
-#line 17
+#line 16
 this.ScenarioSetup(scenarioInfo);
-#line 18
+#line 17
  testRunner.Given("I have dictionary containing the words: foo, oof");
-#line 19
+#line 18
  testRunner.When("I ask for the anagram of the word foo");
-#line 20
+#line 19
  testRunner.Then("the result should be a set containing the words: foo, oof");
 #line hidden
             this.ScenarioCleanup();
@@ -121,14 +121,48 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void DictionaryWithThreeWordsThatAreNoAllAnagrams()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Dictionary with three words that are no all anagrams", ((string[])(null)));
-#line 22
+#line 21
 this.ScenarioSetup(scenarioInfo);
-#line 23
+#line 22
  testRunner.Given("I have dictionary containing the words: foo, oof, xxx");
-#line 24
+#line 23
  testRunner.When("I ask for the anagram of the word foo");
-#line 25
+#line 24
  testRunner.Then("the result should not contain the words: xxx");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Dictionary with four words that are no all anagrams")]
+        public virtual void DictionaryWithFourWordsThatAreNoAllAnagrams()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Dictionary with four words that are no all anagrams", ((string[])(null)));
+#line 26
+this.ScenarioSetup(scenarioInfo);
+#line 27
+ testRunner.Given("I have dictionary containing the words: foo, oof, xxx, yyy");
+#line 28
+ testRunner.When("I ask for the anagram of the word foo");
+#line 29
+ testRunner.Then("the result should not contain the words: xxx, yyy");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Dictionary with few words that are no all anagrams")]
+        public virtual void DictionaryWithFewWordsThatAreNoAllAnagrams()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Dictionary with few words that are no all anagrams", ((string[])(null)));
+#line 31
+this.ScenarioSetup(scenarioInfo);
+#line 32
+ testRunner.Given("I have dictionary containing the words: foo, oof, ofo, xxx, yyy");
+#line 33
+ testRunner.When("I ask for the anagram of the word ofo");
+#line 34
+ testRunner.Then("the result should be a set containing the words: foo, oof,  ofo");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -13,7 +13,6 @@ Scenario: Dictionary with a single word
 	When I ask for the anagram of the word foo
 	Then the result should be a set containing the words: foo
 
-
 Scenario: Dictionary with two words that are anagrams each other
 	Given I have dictionary containing the words: foo, oof  
 	When I ask for the anagram of the word foo
@@ -24,5 +23,14 @@ Scenario: Dictionary with three words that are no all anagrams
 	When I ask for the anagram of the word foo
 	Then the result should not contain the words: xxx
 
+Scenario: Dictionary with four words that are no all anagrams 
+	Given I have dictionary containing the words: foo, oof, xxx, yyy
+	When I ask for the anagram of the word foo
+	Then the result should not contain the words: xxx, yyy
+
+Scenario: Dictionary with few words that are no all anagrams 
+	Given I have dictionary containing the words: foo, oof, ofo, xxx, yyy
+	When I ask for the anagram of the word ofo
+	Then the result should be a set containing the words: foo, oof,  ofo
 
 
