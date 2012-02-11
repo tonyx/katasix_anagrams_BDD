@@ -1,7 +1,7 @@
-﻿Feature: Addition
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+﻿Feature: KataSix anagrams
+	In order to improve my vocabulary knowledge
+	As a curious guy
+	I want to be told how many anagrams of a given word are present in a dictionary
 
 Scenario: An empty dictionary
 	Given I have an empty dictionary  
